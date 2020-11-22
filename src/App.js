@@ -3,22 +3,19 @@ import Home from './components/Home/home-dom-index.js';
 import React from 'react';
 import { Link, useLocation, BrowserRouter as Router } from "react-router-dom";
 import Ajax from './Ajax';
-import VerticalMenu from "./components/Menu/verticalMenu.js";
+import VerticalMenu from "./components/Menu/VerticalMenu.js";
 
 let log = 0;
 
-export function Coucou(){
-  console.log('salut');
-}
-function UserToken({ token }) {
 
+function UserToken({ token }) {
   if (token != null){
     console.log(token);
-    
+ 
     let ajax = new Ajax(token, 'UserInfo');
     console.log(ajax);
     log = true;
-  return log, <Home remove="true" attribut="login"> {ajax.display_name}</Home>
+  return log, <Home remove="true" attribut="login"> Bienvenue </Home>
   }
     
   return <Home  attribut="login">Connectez-vous</Home>
@@ -42,7 +39,8 @@ function QueryUrl() {
 }
 
 
-function App() {
+function App(props) {
+  console.log(props);
   if(log == 0){
     return (
     <>
@@ -56,7 +54,7 @@ function App() {
   if(log ==true){
     return(
       <>
-      <VerticalMenu id="salut"/>
+      <VerticalMenu id="nav-vertical" />
       </>
     )
   };

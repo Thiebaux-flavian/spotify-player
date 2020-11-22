@@ -8,6 +8,7 @@ class Ajax {
         constructor(accessToken){
             this.accessToken = accessToken;
             this.get();
+            this.check = 0;
         }
         get(){
                //seek user let url='https://api.spotify.com/v1/users/julie';
@@ -15,6 +16,7 @@ class Ajax {
                 
                 let urlUser = "https://api.spotify.com/v1/me"; //ppl log
                 $.ajax({
+                   
                     url: urlUser,
                     method: 'GET',
                     headers: {
@@ -22,15 +24,14 @@ class Ajax {
                         'Authorization': 'Bearer ' + this.accessToken
                     },
                     success: function(response) {
-                        console.log('salut');
-                        Coucou(response);
-                    }
-          
+                   
+                        App(response);
+                    }   
                 });
                 
             }
                 }
         
 
-
+            
 export default Ajax;

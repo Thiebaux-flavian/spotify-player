@@ -54,36 +54,8 @@ body{
 .switch{
   display: none;
 }
-nav{
-  position: absolute;
-  left: 0%;
-  top: 10%;
-  height: 80%;
-  width: 5%;
-  display: flex;
-  flex-direction: column;
-  background: grey;
-  flex: 1;
-  overflow: hidden;
-  border-radius: 0 20px 20px 0;
-}
-#menu-container{
-  position: relative;
-  top:10%;
-  width: 80%;
-  left:10%;
-  height: 100%;
-}
 nav div{
-  flex-direction: row;
-  width: 100%;
   height: 30%;
-  align-content: center;
-  text-align: center;
-  align-items: center;
-}
-nav div:nth-child(3){
-  background:red;
 }
 li{
   list-style-type: none;
