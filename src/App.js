@@ -7,7 +7,9 @@ import VerticalMenu from "./components/Menu/verticalMenu.js";
 
 let log = 0;
 
-
+export function Coucou(){
+  console.log('salut');
+}
 function UserToken({ token }) {
 
   if (token != null){
