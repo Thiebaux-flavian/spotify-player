@@ -1,10 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './animation.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Ajax from './Ajax.js';
 
+import Coucou from './main.js';
 ReactDOM.render(
+  
   <React.StrictMode>
     <App />
   </React.StrictMode>,

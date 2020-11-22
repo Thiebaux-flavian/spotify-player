@@ -1,25 +1,64 @@
-import logo from './logo.svg';
 import './App.css';
+import Home from './components/Home/home-dom-index.js';
+import React from 'react';
+import { Link, useLocation, BrowserRouter as Router } from "react-router-dom";
+import Ajax from './Ajax';
+import VerticalMenu from "./components/Menu/verticalMenu.js";
 
-function App() {
+let log = 0;
+
+
+function UserToken({ token }) {
+
+  if (token != null){
+    console.log(token);
+    
+    let ajax = new Ajax(token, 'UserInfo');
+    console.log(ajax);
+    log = true;
+  return log, <Home remove="true" attribut="login"> {ajax.display_name}</Home>
+  }
+    
+  return <Home  attribut="login">Connectez-vous</Home>
+  ;
+}
+
+function getAccessToken() {
+  var searchParams = new URLSearchParams(document.location.href);
+  return new URLSearchParams(document.location.href);
+}
+
+function QueryUrl() {
+  let query = getAccessToken();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <div>
+        <UserToken token={query.get('http://localhost:3000/callback/index.html#access_token')} />
+      </div>
     </div>
   );
 }
+
+
+function App() {
+  if(log == 0){
+    return (
+    <>
+      <Router>
+        <QueryUrl />
+      </Router>
+    </>
+       
+  );
+  }
+  if(log ==true){
+    return(
+      <>
+      <VerticalMenu id="salut"/>
+      </>
+    )
+  };
+  }
+  
 
 export default App;

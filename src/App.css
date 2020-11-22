@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+body{
+  width: 100%;
+  margin:0;
+  padding:0;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.home-app {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  flex-direction: row;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.home-app article{
+  height: 100vh;
+  background: rgb(226, 217, 217);
+}
+.home-app article:nth-child(2n+1){
+  background: rgb(200, 80, 80);
+}
+#home-aside{
+  top: 15%;
+  position: absolute;
+  text-align: center;
+}
+#home-aside{
+  position: absolute;
+  z-index: 2;
+}
+#home-aside .p-left,#home-aside .p-right{
+  z-index:2;
+  font-size: 36px;
+  font-weight: 800;
+  position: absolute;
+}
+#home-aside .p-right{
+  color:  rgba(200,80,80,1);
+   right: 10%;
+}
+#home-aside .p-left{
+  color: rgba(226,217,217,1);
+  left: 10%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login{
+  position: absolute;
+  top: 30%;
+  left: 42.5%;
+  width: 15%;
+  font-size: 1.5em;
+  background: linear-gradient(90deg, rgba(226,217,217,1) 0%, rgba(200,80,80,1) 70%, rgba(200,80,80,1) 100%);
+  border: none;
+}
+/***   background-color: #282c34;
+*/
+
+.switch{
+  display: none;
+}
+nav{
+  position: absolute;
+  left: 0%;
+  top: 10%;
+  height: 80%;
+  width: 5%;
+  display: flex;
+  flex-direction: column;
+  background: grey;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 0 20px 20px 0;
+}
+#menu-container{
+  position: relative;
+  top:10%;
+  width: 80%;
+  left:10%;
+  height: 100%;
+}
+nav div{
+  flex-direction: row;
+  width: 100%;
+  height: 30%;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+nav div:nth-child(3){
+  background:red;
+}
+li{
+  list-style-type: none;
+}
+li i{
+  font-size: 40px;
 }
