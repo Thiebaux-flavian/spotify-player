@@ -18,7 +18,6 @@ class VerticalMenu extends React.Component {
 
     onMouseEnter(e){
         e.preventDefault();
-
     }
     
     onMouseOut(e){
@@ -27,23 +26,22 @@ class VerticalMenu extends React.Component {
     }
 
     render() { 
+        
         return(
 
         <>
-        <nav id={this.props.id} style={{
+        <nav onMouseEnter={this.onMouseEnter} onMouseOut={this.onMouseOut} id={this.props.id} style={{
             "position": "absolute",
             "left":"0%",
-            "top":"20%",
+            "top":"15%",
             "height": "40%",
             "width":"auto",
             "flexDirection":"column",
-            "background":"grey",
             "overflow": "hidden",
-            "borderRadius": "0 20px 20px 0",
-            "alignItems": "center",
+           "alignItems": "center",
             "textAlign": "center"
         }}>
-            <DisplayMenu>
+            <DisplayMenu >
             </DisplayMenu>
         </nav>
         

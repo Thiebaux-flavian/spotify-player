@@ -20,11 +20,13 @@ class Home extends React.Component {
 
                 }, 700);
                 setTimeout(() => {
-                    $('#connexion').addClass('switch');                  
-                    $('#headphone').css('filter', 'blur(2px)'); 
+                    $('#connexion').addClass('switch');         
+                    $('#headphone').css('filter', 'blur(1px)'); 
                     let sectionRemove = document.querySelector('section');
-                    sectionRemove.remove(sectionRemove);   //Clean la section Home   
-                render(
+                    sectionRemove.remove(sectionRemove);   //Clean la section Home
+                      
+                   
+                    render(
                     <App/> 
                 );
                 }, 1100);
@@ -68,7 +70,7 @@ class Home extends React.Component {
         </figure>
        
         <div className={this.remove ? '' : ''}id="login">       
-        <a href="https://accounts.spotify.com/authorize?client_id=05769ee72ff44c248a9c4abf0617ee68&redirect_uri=http://localhost:3000/callback/index.html&scope=user-read-private%20user-read-email&response_type=token&state=123" id="connexion" className={this.className} onMouseEnter={this.onMouseEnter}onMouseOut={this.onMouseOut} onClick={this.onMouseClick}>{this.props.children}</a>
+        <a href="https://accounts.spotify.com/authorize?client_id=05769ee72ff44c248a9c4abf0617ee68&redirect_uri=http://localhost:3000/callback/index.html&scope=user-read-private%20user-read-email%20user-read-currently-playing&response_type=token&state=123" id="connexion" className={this.className} onMouseEnter={this.onMouseEnter}onMouseOut={this.onMouseOut} onClick={this.onMouseClick}>{this.props.children}</a>
         
         </div>
         

@@ -17,21 +17,20 @@ class DisplayMenu extends React.Component {
 
     onMouseEnter(e){
         e.preventDefault();
-        $('#naviguation').css('width','100px');
+      
     }
     
     onMouseOut(e){
         
        e.preventDefault();
-       $('#naviguation').css('width','50px');
     }
 
     render() { 
         return(
 
-        <>
+        < >
         <div onMouseEnter={this.onMouseEnter} onMouseOut={this.onMouseOut} id="naviguation" style={{
-            "width": "50px", 
+            
             "display":"flex", 
             "flexDirection":"column",
             "position":"relative",
@@ -40,9 +39,9 @@ class DisplayMenu extends React.Component {
             'zIndex':'2'
             
             }}>
-            <IconMenu iClass="fas fa-home" chemin="patate" />
-            <IconMenu iClass="fas fa-compact-disc" chemin="patate" />
-            <IconMenu iClass="fas fa-podcast" chemin="patate" />
+            <IconMenu iClass="fas fa-home" chemin="patate" text="HOME"/>
+            <IconMenu iClass="fas fa-compact-disc" chemin="patate" text="BROWSE"/>
+            <IconMenu iClass="fas fa-podcast" chemin="patate" text="RADIO"/>
         </div>
         
         </>

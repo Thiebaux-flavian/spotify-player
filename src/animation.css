@@ -142,3 +142,32 @@
     }
   }
   
+@-webkit-keyframes scale-up-hor-left {
+        0% {
+          -webkit-transform: width(45px);
+                  transform: width(50px);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+        }
+        100% {
+                -webkit-transform: width(100px);
+                transform: width(100px);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+        }
+      }
+      @keyframes scale-up-hor-left {
+        0% {
+                -webkit-transform: width(45px);
+                transform: width(50px);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+        }
+        100% {
+                -webkit-transform: width(100px);
+                transform: width(100px);
+          -webkit-transform-origin: 0% 0%;
+                  transform-origin: 0% 0%;
+        }
+      }
+      

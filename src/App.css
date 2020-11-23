@@ -2,6 +2,19 @@ body{
   width: 100%;
   margin:0;
   padding:0;
+
+
+}
+#body{
+  position: absolute;
+  left: 0;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  background: rgb(226,217,217);
+  background: radial-gradient(circle, rgba(226,217,217,1) 0%, rgba(200,80,80,1) 13%, rgba(255,255,255,1) 17%);
+
+
 }
 .home-app {
   display: flex;
@@ -54,12 +67,63 @@ body{
 .switch{
   display: none;
 }
-nav div{
-  height: 30%;
+#img-vertical{
+  width: auto;
+  height: auto;
+}
+#naviguation {
+  z-index: 9;
+  width: 50px;
+}
+#naviguation, #current_img, #naviguation figcaption{
+
+  transition: width 0.2s ease-in-out;
+  color: rgba(226,217,217,1);
+  background: rgba(72,72,72,1);
+  border-radius: 0 20px 20px 0;
+  border-right: 5px solid rgba(200,80,80,1);
+  border-bottom: 5px solid rgba(200,80,80,1);
+}
+a{
+  text-decoration: none;
+  list-style: none;
+  color: rgba(226,217,217,1);
+}
+a:hover{
+  
+  color: rgba(226,217,217,1);
+}
+#iconRender:hover{
+
+  background: rgba(200,80,80,1);
+  border-radius: 0 15px 0 0;
+}
+#iconRender:nth-child(2):hover{
+  border-radius: 0 0 0 0;
+}
+#iconRender:nth-child(3):hover{
+  border-radius: 0 0 2px 0;
+  border: 5px;
+}
+#naviguation:hover{
+  width: 130px;
 }
 li{
   list-style-type: none;
 }
 li i{
   font-size: 40px;
+}
+#main-display{
+  width: 65%;
+  height: 90%;
+  padding: 5px;
+  background: rgba(72,72,72,0.99);
+  z-index:999;
+  text-align: center;
+  color: white;
+  top: 5%;
+  right:2%;
+  position: absolute;
+  display: block;
 }

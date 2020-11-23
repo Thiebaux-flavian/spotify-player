@@ -5,6 +5,7 @@ class IconMenu extends React.Component {
     constructor(props){
         super(props);
         this.iClass = this.props.iClass;
+        this.text= this.props.text;
     }
 
     componentDidMount(){
@@ -15,36 +16,40 @@ class IconMenu extends React.Component {
     onMouseEnter(e){
         e.preventDefault();
 
-        $('#naviguation').css('width','100px');
+        
     }
     
     onMouseOut(e){
         
        e.preventDefault();
        
-       $('#naviguation').css('width','50px');
     }
 
     render() { 
         return(
 
         <>
-        <div  onMouseEnter={this.onMouseEnter} onMouseOut={this.onMouseOut}  style={{
+        <div  id="iconRender" onMouseEnter={this.onMouseEnter} onMouseOut={this.onMouseOut}  style={{
             "display": "flex",
             "flex":"1",
             "alignItems":"center",
-            "background":"red",
             "width":"100%"
             }}>
-                <i className={this.iClass} style={{
+                <a onMouseEnter={this.onMouseEnter} onMouseOut={this.onMouseOut}  className={this.iClass} style={{
                 "fontSize": "24px",
-                "marginLeft":"10px"
+                "marginLeft":"10px",
+                "textDecoration":"none"
                 }}>
-                </i>
-                <p style={{
+                </a>
+                <p onMouseEnter={this.onMouseEnter} onMouseOut={this.onMouseOut} style={{
                     "position":"absolute",
-                    "left":"52px"
-                            }}>coucou</p>
+                    "left":"50px",
+                    "textAlign":"center",
+                    "fontWeight":"800",
+                    "fontSize":"15px",
+                    "marginBottom":"5px",
+                    
+                            }}>{this.text}</p>
         </div>
         </>
 
